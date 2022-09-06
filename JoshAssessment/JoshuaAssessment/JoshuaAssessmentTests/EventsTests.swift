@@ -1,37 +1,39 @@
 //
-//  ViewController.swift
-//  JoshuaAssessment
+//  JoshuaAssessmentTests.swift
+//  JoshuaAssessmentTests
 //
 //  Created by Joshua Coetzer on 2022/09/05.
 //
 
-import UIKit
+import XCTest
+@testable import JoshuaAssessment
 
-class EventsViewController: UIViewController {
-    let viewModel: EventsViewModel
+class EventsTests: XCTestCase {
+    let systemUnderTest = EventsViewModel()
     let group = DispatchGroup()
-
-    required init?(coder aDecoder: NSCoder) {
-        viewModel = EventsViewModel()
-        super.init(coder: aDecoder)
-    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        group.enter()
-        getEventsData()
+    func testEventsNumber() throws {
         group.notify(queue: .main) {
-            print(self.viewModel.events?.count)
+            XCTAssertEqual(16, self.systemUnderTest.events?.count)
         }
     }
 
+}
+
+extension EventsTests {
+    override func setUp() {
+        super.setUp()
+        group.enter()
+        getEventsData()
+    }
+    
     private func getEventsData() {
         guard let url = URL(string: String.eventsUrl) else { return }
         
         URLSession.shared.fetchEvents(at: url) { result in
             switch result {
             case .success(let events):
-                self.viewModel.events = events
+                self.systemUnderTest.events = events
                 self.group.leave()
             case .failure(let error):
                 print(error)
@@ -39,4 +41,3 @@ class EventsViewController: UIViewController {
         }
     }
 }
-

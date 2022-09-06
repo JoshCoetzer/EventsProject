@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+class ScheduleViewModel {
+    public var schedules: [Schedule]?
+}

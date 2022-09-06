@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		E011B44328C7CE0F007EA47C /* EventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011B44228C7CE0F007EA47C /* EventsViewModel.swift */; };
 		E011B44628C7CE2C007EA47C /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011B44528C7CE2C007EA47C /* ScheduleViewModel.swift */; };
+		E02E555928C7D41600543064 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E555828C7D41600543064 /* Event.swift */; };
+		E02E555B28C7D44100543064 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E555A28C7D44100543064 /* Schedule.swift */; };
+		E02E555E28C7D4A500543064 /* URLSession+FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */; };
+		E02E556128C7D7CA00543064 /* String+URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E556028C7D7CA00543064 /* String+URLs.swift */; };
+		E02E556328C7E27F00543064 /* SchedulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E556228C7E27F00543064 /* SchedulesTests.swift */; };
 		E0D104CA28C68DE100756780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104C928C68DE100756780 /* AppDelegate.swift */; };
 		E0D104CC28C68DE200756780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104CB28C68DE200756780 /* SceneDelegate.swift */; };
 		E0D104CE28C68DE200756780 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104CD28C68DE200756780 /* EventsViewController.swift */; };
 		E0D104D128C68DE200756780 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D104CF28C68DE200756780 /* Main.storyboard */; };
 		E0D104D328C68DE300756780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0D104D228C68DE300756780 /* Assets.xcassets */; };
 		E0D104D628C68DE300756780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0D104D428C68DE300756780 /* LaunchScreen.storyboard */; };
-		E0D104E128C68DE400756780 /* JoshuaAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104E028C68DE400756780 /* JoshuaAssessmentTests.swift */; };
+		E0D104E128C68DE400756780 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104E028C68DE400756780 /* EventsTests.swift */; };
 		E0D104EB28C68DE400756780 /* JoshuaAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104EA28C68DE400756780 /* JoshuaAssessmentUITests.swift */; };
 		E0D104ED28C68DE400756780 /* JoshuaAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104EC28C68DE400756780 /* JoshuaAssessmentUITestsLaunchTests.swift */; };
 		E0D104FA28C6942C00756780 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104F928C6942C00756780 /* ScheduleViewController.swift */; };
@@ -41,6 +46,11 @@
 /* Begin PBXFileReference section */
 		E011B44228C7CE0F007EA47C /* EventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewModel.swift; sourceTree = "<group>"; };
 		E011B44528C7CE2C007EA47C /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		E02E555828C7D41600543064 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		E02E555A28C7D44100543064 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+FetchData.swift"; sourceTree = "<group>"; };
+		E02E556028C7D7CA00543064 /* String+URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLs.swift"; sourceTree = "<group>"; };
+		E02E556228C7E27F00543064 /* SchedulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesTests.swift; sourceTree = "<group>"; };
 		E0D104C628C68DE100756780 /* JoshuaAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoshuaAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D104C928C68DE100756780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0D104CB28C68DE200756780 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,7 +60,7 @@
 		E0D104D528C68DE300756780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0D104D728C68DE300756780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0D104DC28C68DE300756780 /* JoshuaAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoshuaAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E0D104E028C68DE400756780 /* JoshuaAssessmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaAssessmentTests.swift; sourceTree = "<group>"; };
+		E0D104E028C68DE400756780 /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		E0D104E628C68DE400756780 /* JoshuaAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JoshuaAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D104EA28C68DE400756780 /* JoshuaAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaAssessmentUITests.swift; sourceTree = "<group>"; };
 		E0D104EC28C68DE400756780 /* JoshuaAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -82,11 +92,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E011B44428C7CE14007EA47C /* Models */ = {
+		E02E555628C7D3DE00543064 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E0D104CF28C68DE200756780 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E02E555728C7D40A00543064 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E02E555828C7D41600543064 /* Event.swift */,
+				E02E555A28C7D44100543064 /* Schedule.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E02E555C28C7D44B00543064 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */,
+				E02E556028C7D7CA00543064 /* String+URLs.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E02E555F28C7D78100543064 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Models;
+			path = Strings;
 			sourceTree = "<group>";
 		};
 		E0D104BD28C68DE100756780 = {
@@ -112,12 +148,14 @@
 		E0D104C828C68DE100756780 /* JoshuaAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				E011B44428C7CE14007EA47C /* Models */,
+				E02E555F28C7D78100543064 /* Strings */,
+				E02E555C28C7D44B00543064 /* Extensions */,
+				E02E555728C7D40A00543064 /* Models */,
+				E02E555628C7D3DE00543064 /* Views */,
 				E0D104FC28C6946C00756780 /* ViewModels */,
 				E0D104FB28C6945A00756780 /* ViewControllers */,
 				E0D104C928C68DE100756780 /* AppDelegate.swift */,
 				E0D104CB28C68DE200756780 /* SceneDelegate.swift */,
-				E0D104CF28C68DE200756780 /* Main.storyboard */,
 				E0D104D228C68DE300756780 /* Assets.xcassets */,
 				E0D104D428C68DE300756780 /* LaunchScreen.storyboard */,
 				E0D104D728C68DE300756780 /* Info.plist */,
@@ -128,7 +166,8 @@
 		E0D104DF28C68DE300756780 /* JoshuaAssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				E0D104E028C68DE400756780 /* JoshuaAssessmentTests.swift */,
+				E0D104E028C68DE400756780 /* EventsTests.swift */,
+				E02E556228C7E27F00543064 /* SchedulesTests.swift */,
 			);
 			path = JoshuaAssessmentTests;
 			sourceTree = "<group>";
@@ -291,11 +330,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02E556128C7D7CA00543064 /* String+URLs.swift in Sources */,
 				E011B44328C7CE0F007EA47C /* EventsViewModel.swift in Sources */,
 				E011B44628C7CE2C007EA47C /* ScheduleViewModel.swift in Sources */,
 				E0D104CE28C68DE200756780 /* EventsViewController.swift in Sources */,
 				E0D104CA28C68DE100756780 /* AppDelegate.swift in Sources */,
+				E02E555E28C7D4A500543064 /* URLSession+FetchData.swift in Sources */,
 				E0D104CC28C68DE200756780 /* SceneDelegate.swift in Sources */,
+				E02E555928C7D41600543064 /* Event.swift in Sources */,
+				E02E555B28C7D44100543064 /* Schedule.swift in Sources */,
 				E0D104FA28C6942C00756780 /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,7 +347,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E0D104E128C68DE400756780 /* JoshuaAssessmentTests.swift in Sources */,
+				E02E556328C7E27F00543064 /* SchedulesTests.swift in Sources */,
+				E0D104E128C68DE400756780 /* EventsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
