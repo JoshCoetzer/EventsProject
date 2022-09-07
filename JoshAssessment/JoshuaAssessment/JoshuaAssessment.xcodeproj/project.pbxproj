@@ -126,13 +126,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E02E555F28C7D78100543064 /* Strings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Strings;
-			sourceTree = "<group>";
-		};
 		E0D104BD28C68DE100756780 = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +148,6 @@
 		E0D104C828C68DE100756780 /* JoshuaAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				E02E555F28C7D78100543064 /* Strings */,
 				E02E555C28C7D44B00543064 /* Extensions */,
 				E02E555728C7D40A00543064 /* Models */,
 				E02E555628C7D3DE00543064 /* Views */,
