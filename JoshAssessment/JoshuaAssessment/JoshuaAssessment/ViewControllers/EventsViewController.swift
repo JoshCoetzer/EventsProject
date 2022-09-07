@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class EventsViewController: UIViewController {
     let viewModel: EventsViewModel
@@ -75,5 +77,15 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let videoURL = URL(string: viewModel.events![indexPath.row].video)
+        let player = AVPlayer(url: videoURL!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        self.present(playerViewController, animated: true) {
+            playerViewController.player!.play()
+        }
     }
 }
