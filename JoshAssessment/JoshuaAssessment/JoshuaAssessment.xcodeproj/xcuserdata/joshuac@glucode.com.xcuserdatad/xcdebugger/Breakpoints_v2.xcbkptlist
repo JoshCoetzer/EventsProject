@@ -3,4 +3,54 @@
    uuid = "9F1CDBC5-5138-4C90-B369-725E1C2FFC75"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "24362287-5C94-4DF2-BC1A-C7506E081072"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JoshuaAssessmentTests/EventsTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "testTitle()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "24362287-5C94-4DF2-BC1A-C7506E081072 - c1a1a6df663e1ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in JoshuaAssessmentTests.EventsTests.testTitle() throws -&gt; ()"
+                  moduleName = "JoshuaAssessmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joshuac@glucode.com/Documents/Onboarding/Events/EventsProject/JoshAssessment/JoshuaAssessment/JoshuaAssessmentTests/EventsTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  uuid = "24362287-5C94-4DF2-BC1A-C7506E081072 - c1a1a6df663e1ad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in JoshuaAssessmentTests.EventsTests.testTitle() throws -&gt; ()"
+                  moduleName = "JoshuaAssessmentTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/joshuac@glucode.com/Documents/Onboarding/Events/EventsProject/JoshAssessment/JoshuaAssessment/JoshuaAssessmentTests/EventsTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
