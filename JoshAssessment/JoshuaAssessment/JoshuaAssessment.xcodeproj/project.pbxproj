@@ -27,6 +27,7 @@
 		E0D4F10728C8E5A600A04454 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10528C8E5A600A04454 /* EventScheduleTableViewCell.swift */; };
 		E0D4F10828C8E5A600A04454 /* EventScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */; };
 		E0D4F10A28C924EC00A04454 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */; };
+		E0D4F10C28C9388900A04454 /* Date+GetFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10B28C9388900A04454 /* Date+GetFromString.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		E0D4F10528C8E5A600A04454 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
+		E0D4F10B28C9388900A04454 /* Date+GetFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+GetFromString.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */,
 				E02E556028C7D7CA00543064 /* String+URLs.swift */,
 				E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */,
+				E0D4F10B28C9388900A04454 /* Date+GetFromString.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				E02E555928C7D41600543064 /* Event.swift in Sources */,
 				E02E555B28C7D44100543064 /* Schedule.swift in Sources */,
 				E0D4F10728C8E5A600A04454 /* EventScheduleTableViewCell.swift in Sources */,
+				E0D4F10C28C9388900A04454 /* Date+GetFromString.swift in Sources */,
 				E0D104FA28C6942C00756780 /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

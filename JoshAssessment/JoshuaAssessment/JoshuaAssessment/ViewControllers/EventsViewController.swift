@@ -45,7 +45,7 @@ class EventsViewController: UIViewController {
         URLSession.shared.fetchEvents(at: url) { result in
             switch result {
             case .success(let events):
-                self.viewModel.events = events
+                self.viewModel.setEvents(with: events)
                 self.group.leave()
             case .failure(let error):
                 print(error)

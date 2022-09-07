@@ -24,6 +24,7 @@ class ScheduleViewController: UIViewController {
         getSchedulesData()
         group.notify(queue: .main) {
             self.setupUI()
+            self.startReloadTimer()
         }
     }
     
@@ -39,13 +40,23 @@ class ScheduleViewController: UIViewController {
         schedulesTableView.register(scheduleCell, forCellReuseIdentifier: "EventScheduleTableViewCell")
     }
     
+    private func startReloadTimer() {
+        let timer = Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(reloadTableView), userInfo: nil, repeats: true)
+    }
+    
+    @objc func reloadTableView() {
+        self.group.enter()
+        self.getSchedulesData()
+        self.schedulesTableView.reloadData()
+    }
+    
     private func getSchedulesData() {
         guard let url = URL(string: String.eventsUrl) else { return }
         
         URLSession.shared.fetchSchedules(at: url) { result in
             switch result {
             case .success(let schedules):
-                self.viewModel.schedules = schedules
+                self.viewModel.setSchedules(with: schedules)
                 self.group.leave()
             case .failure(let error):
                 print(error)

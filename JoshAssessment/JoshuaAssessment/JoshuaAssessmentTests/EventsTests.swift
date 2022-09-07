@@ -33,7 +33,7 @@ extension EventsTests {
         URLSession.shared.fetchEvents(at: url) { result in
             switch result {
             case .success(let events):
-                self.systemUnderTest.events = events
+                self.systemUnderTest.setEvents(with: events)
                 self.group.leave()
             case .failure(let error):
                 print(error)

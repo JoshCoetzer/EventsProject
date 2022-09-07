@@ -33,7 +33,7 @@ extension SchedulesTests {
         URLSession.shared.fetchSchedules(at: url) { result in
             switch result {
             case .success(let schedules):
-                self.systemUnderTest.schedules = schedules
+                self.systemUnderTest.setSchedules(with: schedules)
                 self.group.leave()
             case .failure(let error):
                 print(error)
