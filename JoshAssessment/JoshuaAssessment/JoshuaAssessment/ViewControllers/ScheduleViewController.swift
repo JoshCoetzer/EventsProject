@@ -41,7 +41,8 @@ class ScheduleViewController: UIViewController {
     }
     
     private func startReloadTimer() {
-        let timer = Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: #selector(reloadTableView), userInfo: nil, repeats: true)
+        let refreshTime = Bundle.main.object(forInfoDictionaryKey: "RefreshTime") as! CGFloat
+        let timer = Timer.scheduledTimer(timeInterval: refreshTime, target: self, selector: #selector(reloadTableView), userInfo: nil, repeats: true)
     }
     
     @objc func reloadTableView() {
@@ -85,6 +86,6 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return Bundle.main.object(forInfoDictionaryKey: "GenericRowHeight") as! CGFloat
     }
 }
