@@ -11,6 +11,8 @@ class ScheduleViewController: UIViewController {
     let viewModel: ScheduleViewModel
     let group = DispatchGroup()
     
+    @IBOutlet weak var schedulesTableView: UITableView!
+    
     required init?(coder aDecoder: NSCoder) {
         viewModel = ScheduleViewModel()
         super.init(coder: aDecoder)
@@ -21,8 +23,20 @@ class ScheduleViewController: UIViewController {
         group.enter()
         getSchedulesData()
         group.notify(queue: .main) {
-            print(self.viewModel.schedules?.count)
+            self.setupUI()
         }
+    }
+    
+    private func setupUI() {
+        schedulesTableView.dataSource = self
+        schedulesTableView.delegate = self
+        registerCell()
+        schedulesTableView.reloadData()
+    }
+    
+    private func registerCell() {
+        let scheduleCell = UINib(nibName: "EventScheduleTableViewCell", bundle: nil)
+        schedulesTableView.register(scheduleCell, forCellReuseIdentifier: "EventScheduleTableViewCell")
     }
     
     private func getSchedulesData() {
@@ -37,5 +51,29 @@ class ScheduleViewController: UIViewController {
                 print(error)
             }
         }
+    }
+}
+
+extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.schedules?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = schedulesTableView.dequeueReusableCell(withIdentifier: "EventScheduleTableViewCell", for: indexPath) as? EventScheduleTableViewCell {
+            if let url = URL(string: viewModel.schedules![indexPath.row].image) {
+                cell.thumbnailImageView.load(url: url)
+            }
+            cell.titleLabel.text = viewModel.schedules?[indexPath.row].title
+            cell.subtitleLabel.text = viewModel.schedules?[indexPath.row].subtitle
+            cell.dateLabel.text = viewModel.schedules?[indexPath.row].date
+            return cell
+        }
+
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

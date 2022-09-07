@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="153" id="KGk-i7-Jjw" customClass="EventScheduleTableViewCell" customModule="JoshuaAssessment" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="513" height="153"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="513" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tv.inset.filled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="b1j-0A-tRQ">
+                        <rect key="frame" x="10" y="10.5" width="140" height="132"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="1Rw-1b-NMb"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABo-bO-Ad1">
+                        <rect key="frame" x="155" y="10" width="75" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SubtitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AOX-7g-oZ4">
+                        <rect key="frame" x="155" y="36" width="100" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DateLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5T-PO-RhU">
+                        <rect key="frame" x="155" y="122" width="78" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ABo-bO-Ad1" firstAttribute="leading" secondItem="b1j-0A-tRQ" secondAttribute="trailing" constant="5" id="0ew-i8-9u7"/>
+                    <constraint firstItem="AOX-7g-oZ4" firstAttribute="top" secondItem="ABo-bO-Ad1" secondAttribute="bottom" constant="5" id="DEX-fd-DDb"/>
+                    <constraint firstItem="AOX-7g-oZ4" firstAttribute="leading" secondItem="b1j-0A-tRQ" secondAttribute="trailing" constant="5" id="ElU-6y-L0v"/>
+                    <constraint firstItem="b1j-0A-tRQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QfQ-E1-3xv"/>
+                    <constraint firstItem="ABo-bO-Ad1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="R34-jW-3cl"/>
+                    <constraint firstAttribute="bottom" secondItem="b1j-0A-tRQ" secondAttribute="bottom" constant="10" id="U2x-Ud-qiM"/>
+                    <constraint firstItem="h5T-PO-RhU" firstAttribute="leading" secondItem="b1j-0A-tRQ" secondAttribute="trailing" constant="5" id="eyw-mC-Vt1"/>
+                    <constraint firstItem="b1j-0A-tRQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ibM-dx-8ar"/>
+                    <constraint firstAttribute="bottom" secondItem="h5T-PO-RhU" secondAttribute="bottom" constant="10" id="vLe-Fi-69U"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dateLabel" destination="h5T-PO-RhU" id="MUg-gY-oC4"/>
+                <outlet property="imageView" destination="b1j-0A-tRQ" id="HvA-m1-GNQ"/>
+                <outlet property="subtitleLabel" destination="AOX-7g-oZ4" id="m6j-R0-CNt"/>
+                <outlet property="thumbnailImageView" destination="b1j-0A-tRQ" id="Ehf-dy-g1z"/>
+                <outlet property="titleLabel" destination="ABo-bO-Ad1" id="t9m-rS-C6d"/>
+            </connections>
+            <point key="canvasLocation" x="277.536231884058" y="134.26339285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tv.inset.filled" catalog="system" width="128" height="97"/>
+    </resources>
+</document>

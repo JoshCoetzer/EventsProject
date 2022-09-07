@@ -24,6 +24,9 @@
 		E0D104EB28C68DE400756780 /* JoshuaAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104EA28C68DE400756780 /* JoshuaAssessmentUITests.swift */; };
 		E0D104ED28C68DE400756780 /* JoshuaAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104EC28C68DE400756780 /* JoshuaAssessmentUITestsLaunchTests.swift */; };
 		E0D104FA28C6942C00756780 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104F928C6942C00756780 /* ScheduleViewController.swift */; };
+		E0D4F10728C8E5A600A04454 /* EventScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10528C8E5A600A04454 /* EventScheduleTableViewCell.swift */; };
+		E0D4F10828C8E5A600A04454 /* EventScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */; };
+		E0D4F10A28C924EC00A04454 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,9 @@
 		E0D104EA28C68DE400756780 /* JoshuaAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaAssessmentUITests.swift; sourceTree = "<group>"; };
 		E0D104EC28C68DE400756780 /* JoshuaAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoshuaAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E0D104F928C6942C00756780 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		E0D4F10528C8E5A600A04454 /* EventScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleTableViewCell.swift; sourceTree = "<group>"; };
+		E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventScheduleTableViewCell.xib; sourceTree = "<group>"; };
+		E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				E0D104CF28C68DE200756780 /* Main.storyboard */,
+				E0D4F10528C8E5A600A04454 /* EventScheduleTableViewCell.swift */,
+				E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +122,7 @@
 			children = (
 				E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */,
 				E02E556028C7D7CA00543064 /* String+URLs.swift */,
+				E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0D104D628C68DE300756780 /* LaunchScreen.storyboard in Resources */,
+				E0D4F10828C8E5A600A04454 /* EventScheduleTableViewCell.xib in Resources */,
 				E0D104D328C68DE300756780 /* Assets.xcassets in Resources */,
 				E0D104D128C68DE200756780 /* Main.storyboard in Resources */,
 			);
@@ -330,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D4F10A28C924EC00A04454 /* UIImageView+Load.swift in Sources */,
 				E02E556128C7D7CA00543064 /* String+URLs.swift in Sources */,
 				E011B44328C7CE0F007EA47C /* EventsViewModel.swift in Sources */,
 				E011B44628C7CE2C007EA47C /* ScheduleViewModel.swift in Sources */,
@@ -339,6 +350,7 @@
 				E0D104CC28C68DE200756780 /* SceneDelegate.swift in Sources */,
 				E02E555928C7D41600543064 /* Event.swift in Sources */,
 				E02E555B28C7D44100543064 /* Schedule.swift in Sources */,
+				E0D4F10728C8E5A600A04454 /* EventScheduleTableViewCell.swift in Sources */,
 				E0D104FA28C6942C00756780 /* ScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

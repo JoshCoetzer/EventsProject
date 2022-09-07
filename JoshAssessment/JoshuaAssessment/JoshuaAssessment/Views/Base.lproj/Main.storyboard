@@ -11,7 +11,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="A5o-aK-3F7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gkc-Fd-lG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController id="vJf-zP-g3z" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KFu-jZ-bE3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -23,6 +22,7 @@
                         <segue destination="3MA-Py-iwX" kind="relationship" relationship="viewControllers" id="LdP-C4-vpd"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkc-Fd-lG7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594" y="68"/>
         </scene>
@@ -66,6 +66,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="HHE-eS-95k"/>
+                    <connections>
+                        <outlet property="eventsTableView" destination="Ttv-Op-8tE" id="TWD-0a-JSg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gXt-WY-EFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,6 +97,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="pDd-gj-zwD"/>
+                    <connections>
+                        <outlet property="schedulesTableView" destination="x7S-gs-agT" id="3Zc-f6-QJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAb-pn-3b4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
