@@ -11,8 +11,6 @@
 		E011B44628C7CE2C007EA47C /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E011B44528C7CE2C007EA47C /* ScheduleViewModel.swift */; };
 		E02E555928C7D41600543064 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E555828C7D41600543064 /* Event.swift */; };
 		E02E555B28C7D44100543064 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E555A28C7D44100543064 /* Schedule.swift */; };
-		E02E555E28C7D4A500543064 /* URLSession+FetchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */; };
-		E02E556128C7D7CA00543064 /* String+URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E556028C7D7CA00543064 /* String+URLs.swift */; };
 		E02E556328C7E27F00543064 /* SchedulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02E556228C7E27F00543064 /* SchedulesTests.swift */; };
 		E0D104CA28C68DE100756780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104C928C68DE100756780 /* AppDelegate.swift */; };
 		E0D104CC28C68DE200756780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D104CB28C68DE200756780 /* SceneDelegate.swift */; };
@@ -26,6 +24,8 @@
 		E0D4F10828C8E5A600A04454 /* EventScheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */; };
 		E0D4F10A28C924EC00A04454 /* UIImageView+Load.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */; };
 		E0D4F10C28C9388900A04454 /* Date+GetFromString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D4F10B28C9388900A04454 /* Date+GetFromString.swift */; };
+		E0F0FC7728CE0576005E9E3B /* URLStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0FC7628CE0575005E9E3B /* URLStrings.swift */; };
+		E0F0FC7A28CE091A005E9E3B /* ServiceCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F0FC7928CE091A005E9E3B /* ServiceCalls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +50,6 @@
 		E011B44528C7CE2C007EA47C /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
 		E02E555828C7D41600543064 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		E02E555A28C7D44100543064 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
-		E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+FetchData.swift"; sourceTree = "<group>"; };
-		E02E556028C7D7CA00543064 /* String+URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLs.swift"; sourceTree = "<group>"; };
 		E02E556228C7E27F00543064 /* SchedulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulesTests.swift; sourceTree = "<group>"; };
 		E0D104C628C68DE100756780 /* JoshuaAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoshuaAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0D104C928C68DE100756780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +67,8 @@
 		E0D4F10628C8E5A600A04454 /* EventScheduleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventScheduleTableViewCell.xib; sourceTree = "<group>"; };
 		E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Load.swift"; sourceTree = "<group>"; };
 		E0D4F10B28C9388900A04454 /* Date+GetFromString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+GetFromString.swift"; sourceTree = "<group>"; };
+		E0F0FC7628CE0575005E9E3B /* URLStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLStrings.swift; sourceTree = "<group>"; };
+		E0F0FC7928CE091A005E9E3B /* ServiceCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCalls.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,8 +118,6 @@
 		E02E555C28C7D44B00543064 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E02E555D28C7D4A500543064 /* URLSession+FetchData.swift */,
-				E02E556028C7D7CA00543064 /* String+URLs.swift */,
 				E0D4F10928C924EC00A04454 /* UIImageView+Load.swift */,
 				E0D4F10B28C9388900A04454 /* Date+GetFromString.swift */,
 			);
@@ -148,6 +146,8 @@
 		E0D104C828C68DE100756780 /* JoshuaAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				E0F0FC7828CE08BC005E9E3B /* Networking */,
+				E0F0FC7528CE0560005E9E3B /* Enums */,
 				E02E555C28C7D44B00543064 /* Extensions */,
 				E02E555728C7D40A00543064 /* Models */,
 				E02E555628C7D3DE00543064 /* Views */,
@@ -187,6 +187,22 @@
 				E011B44528C7CE2C007EA47C /* ScheduleViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		E0F0FC7528CE0560005E9E3B /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				E0F0FC7628CE0575005E9E3B /* URLStrings.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		E0F0FC7828CE08BC005E9E3B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E0F0FC7928CE091A005E9E3B /* ServiceCalls.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,18 +338,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0D4F10A28C924EC00A04454 /* UIImageView+Load.swift in Sources */,
-				E02E556128C7D7CA00543064 /* String+URLs.swift in Sources */,
 				E011B44328C7CE0F007EA47C /* EventsViewModel.swift in Sources */,
 				E011B44628C7CE2C007EA47C /* ScheduleViewModel.swift in Sources */,
 				E0D104CE28C68DE200756780 /* EventsViewController.swift in Sources */,
 				E0D104CA28C68DE100756780 /* AppDelegate.swift in Sources */,
-				E02E555E28C7D4A500543064 /* URLSession+FetchData.swift in Sources */,
 				E0D104CC28C68DE200756780 /* SceneDelegate.swift in Sources */,
 				E02E555928C7D41600543064 /* Event.swift in Sources */,
 				E02E555B28C7D44100543064 /* Schedule.swift in Sources */,
+				E0F0FC7728CE0576005E9E3B /* URLStrings.swift in Sources */,
 				E0D4F10728C8E5A600A04454 /* EventScheduleTableViewCell.swift in Sources */,
 				E0D4F10C28C9388900A04454 /* Date+GetFromString.swift in Sources */,
 				E0D104FA28C6942C00756780 /* ScheduleViewController.swift in Sources */,
+				E0F0FC7A28CE091A005E9E3B /* ServiceCalls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

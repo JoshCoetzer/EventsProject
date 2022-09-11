@@ -10,10 +10,10 @@ import AVKit
 import AVFoundation
 
 class EventsViewController: UIViewController {
-    let viewModel: EventsViewModel
-    let group = DispatchGroup()
+    private let viewModel: EventsViewModel
+    private let group = DispatchGroup()
 
-    @IBOutlet weak var eventsTableView: UITableView!
+    @IBOutlet private weak var eventsTableView: UITableView!
     
     required init?(coder aDecoder: NSCoder) {
         viewModel = EventsViewModel()
@@ -23,7 +23,7 @@ class EventsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         group.enter()
-        getEventsData()
+        viewModel.getEventsData(group: group)
         group.notify(queue: .main) {
             self.setupUI()
         }
@@ -40,20 +40,6 @@ class EventsViewController: UIViewController {
         let eventCell = UINib(nibName: "EventScheduleTableViewCell", bundle: nil)
         eventsTableView.register(eventCell, forCellReuseIdentifier: "EventScheduleTableViewCell")
     }
-    
-    private func getEventsData() {
-        guard let url = URL(string: String.eventsUrl) else { return }
-        
-        URLSession.shared.fetchEvents(at: url) { result in
-            switch result {
-            case .success(let events):
-                self.viewModel.setEvents(with: events)
-                self.group.leave()
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
 }
 
 extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
@@ -63,12 +49,11 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = eventsTableView.dequeueReusableCell(withIdentifier: "EventScheduleTableViewCell", for: indexPath) as? EventScheduleTableViewCell {
-            if let url = URL(string: viewModel.events![indexPath.row].image) {
-                cell.thumbnailImageView.load(url: url)
-            }
-            cell.titleLabel.text = viewModel.events?[indexPath.row].title
-            cell.subtitleLabel.text = viewModel.events?[indexPath.row].subtitle
-            cell.dateLabel.text = viewModel.events?[indexPath.row].date
+            guard let url = URL(string: viewModel.events![indexPath.row].image) else { return UITableViewCell() }
+            cell.populateCell(thumbnailImageUrl: url,
+                              title: viewModel.events?[indexPath.row].title,
+                              subtitle: viewModel.events?[indexPath.row].subtitle,
+                              date: viewModel.events?[indexPath.row].date)
             return cell
         }
 
@@ -87,5 +72,6 @@ extension EventsViewController: UITableViewDelegate, UITableViewDataSource {
         self.present(playerViewController, animated: true) {
             playerViewController.player!.play()
         }
+        eventsTableView.deselectRow(at: indexPath, animated: true)
     }
 }

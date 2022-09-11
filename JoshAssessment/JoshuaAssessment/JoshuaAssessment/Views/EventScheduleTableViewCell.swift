@@ -22,4 +22,10 @@ class EventScheduleTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    func populateCell(thumbnailImageUrl: URL, title: String?, subtitle: String?, date: String?) {
+        thumbnailImageView.load(url: thumbnailImageUrl)
+        titleLabel.text = title
+        subtitleLabel.text = subtitle
+        dateLabel.text = date
+    }
 }

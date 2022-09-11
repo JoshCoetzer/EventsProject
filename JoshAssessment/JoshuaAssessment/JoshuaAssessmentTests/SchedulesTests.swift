@@ -65,17 +65,7 @@ extension SchedulesTests {
     }
     
     private func getSchedulesData() {
-        guard let url = URL(string: String.schedulesUrl) else { return }
-        
-        URLSession.shared.fetchSchedules(at: url) { result in
-            switch result {
-            case .success(let schedules):
-                self.systemUnderTest.setSchedules(with: schedules)
-                self.group.leave()
-            case .failure(let error):
-                print(error)
-            }
-        }
+        systemUnderTest.getSchedulesData(group: group)
     }
 }
 

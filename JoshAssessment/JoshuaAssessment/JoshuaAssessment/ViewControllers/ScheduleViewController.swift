@@ -8,10 +8,10 @@
 import UIKit
 
 class ScheduleViewController: UIViewController {
-    let viewModel: ScheduleViewModel
-    let group = DispatchGroup()
+    private let viewModel: ScheduleViewModel
+    private let group = DispatchGroup()
     
-    @IBOutlet weak var schedulesTableView: UITableView!
+    @IBOutlet private weak var schedulesTableView: UITableView!
     
     required init?(coder aDecoder: NSCoder) {
         viewModel = ScheduleViewModel()
@@ -21,7 +21,7 @@ class ScheduleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         group.enter()
-        getSchedulesData()
+        viewModel.getSchedulesData(group: group)
         group.notify(queue: .main) {
             self.setupUI()
             self.startReloadTimer()
@@ -47,22 +47,8 @@ class ScheduleViewController: UIViewController {
     
     @objc func reloadTableView() {
         self.group.enter()
-        self.getSchedulesData()
+        self.viewModel.getSchedulesData(group: group)
         self.schedulesTableView.reloadData()
-    }
-    
-    private func getSchedulesData() {
-        guard let url = URL(string: String.eventsUrl) else { return }
-        
-        URLSession.shared.fetchSchedules(at: url) { result in
-            switch result {
-            case .success(let schedules):
-                self.viewModel.setSchedules(with: schedules)
-                self.group.leave()
-            case .failure(let error):
-                print(error)
-            }
-        }
     }
 }
 
@@ -73,12 +59,13 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = schedulesTableView.dequeueReusableCell(withIdentifier: "EventScheduleTableViewCell", for: indexPath) as? EventScheduleTableViewCell {
-            if let url = URL(string: viewModel.schedules![indexPath.row].image) {
-                cell.thumbnailImageView.load(url: url)
-            }
-            cell.titleLabel.text = viewModel.schedules?[indexPath.row].title
-            cell.subtitleLabel.text = viewModel.schedules?[indexPath.row].subtitle
-            cell.dateLabel.text = viewModel.schedules?[indexPath.row].date
+            
+            guard let url = URL(string: viewModel.schedules![indexPath.row].image) else { return UITableViewCell() }
+            cell.populateCell(thumbnailImageUrl: url,
+                              title: viewModel.schedules?[indexPath.row].title,
+                              subtitle: viewModel.schedules?[indexPath.row].subtitle,
+                              date: viewModel.schedules?[indexPath.row].date)
+            
             return cell
         }
 
@@ -87,5 +74,9 @@ extension ScheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Bundle.main.object(forInfoDictionaryKey: "GenericRowHeight") as! CGFloat
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        schedulesTableView.deselectRow(at: indexPath, animated: true)
     }
 }

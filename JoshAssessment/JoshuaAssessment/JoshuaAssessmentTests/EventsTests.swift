@@ -71,16 +71,6 @@ extension EventsTests {
     }
     
     private func getEventsData() {
-        guard let url = URL(string: String.eventsUrl) else { return }
-        
-        URLSession.shared.fetchEvents(at: url) { result in
-            switch result {
-            case .success(let events):
-                self.systemUnderTest.setEvents(with: events)
-                self.group.leave()
-            case .failure(let error):
-                print(error)
-            }
-        }
+        self.systemUnderTest.getEventsData(group: group)
     }
 }
